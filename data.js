@@ -1,29 +1,60 @@
+/*Mackenzie Willard
+* This is the file that containes the data for the select option menue
+* as long as the data is formated the same other menues can be built like this
+*/
+
 var data = Object();
-data['A'] = ['A1','A2','A3'];
-data['B'] = ['B1','B2','B3'];
+data['doYouGo'] = ['Do you go to the gym','Yes I go to the gym','No I do not go to the gym'];
 
-data['A1'] = ['A11','A12','A13'];
-data['A2'] = ['A21','A22','A23'];
-data['A3'] = ['A31','A32','A33'];
-data['B1'] = ['B11','B12','B13'];
-data['B2'] = ['B21','B22','B23'];
-data['B3'] = ['B31','B32','B33'];
+//the options from do you go to the gym
+data['Yes I go to the gym'] = ['What do you do at the gym','Classes','Cardio','Weight Training'];
+data['No I do not go to the gym'] = ['dyel','.jpg'];
 
-data['A11'] = ['A111','A112','A113'];
-data['A12'] = ['A121','A122','A123'];
-data['A13'] = ['A131','A132','A133'];
-data['A21'] = ['A211','A221','A231'];
-data['A22'] = ['A221','A222','A223'];
-data['A23'] = ['A231','A232','A233'];
-data['A31'] = ['A311','A312','A313'];
-data['A32'] = ['A321','A322','A333'];
-data['A33'] = ['A331','A332','A333'];
-data['B11'] = ['B111','B112','B113'];
-data['B12'] = ['B121','B122','B123'];
-data['B13'] = ['B131','B132','B133'];
-data['B21'] = ['B211','B212','B213'];
-data['B22'] = ['B221','B222','B223'];
-data['B23'] = ['B231','B232','B233'];
-data['B31'] = ['B311','B312','B313'];
-data['B32'] = ['B321','B322','B323'];
-data['B33'] = ['B331','B332','B333'];
+//the options from what do you do at the gym
+data['Classes'] = ['dyel','.jpg'];
+data['Cardio'] = ['dyel','.jpg'];
+data['Weight Training'] = ['What do you do for weight training', 'Machines','TRX','Body Weight','Free Weights'];
+
+// the options from what do you do for weight trainging
+data['Machines'] = ['dyel','.jpg'];
+data['TRX'] = ['dyel','.jpg'];
+data['Body Weight'] = ['dyel','.jpg'];
+data['Free Weights'] = ['What are you doing with the free weights', 'Body Building','Crossfit'];
+
+//the options from what are you doing with the free weights
+data['Body Building'] = ['What is your body building like','I look like I body build','I am strong', 'I compete'];
+data['Crossfit'] = ['dyel','.jpg'];
+
+// the options from what is your body building like 
+data['I look like I body build'] = ['Are you aesthetic','Yes I am aesthetic','I am Big','No I am not aesthetic'];
+data['I am strong'] = ['Are you really strong','Yes I am really strong', 'Well I guess not that strong'];
+data['I compete'] = ['Do you actually compete','Yes of course I compete','No I just said I did to see the options here'];
+
+//the options from are you aesthetic
+data['Yes I am aesthetic'] = ["Are people'Mirin","Of course people are 'Mirin","Yeah not really sure what 'Mirin is"];
+data['I am Big'] = ['dyel','.jpg'];
+data['No I am not aesthetic'] = ['dyel','.jpg'];
+
+//the data from are you really strong
+data['Yes I am really strong'] = ['Can you do 3 plates for 15 reps','Yes I can','No that is too much for me'];
+data['Well I guess not that strong'] = ['dyel','.jpg'];
+
+// the options for do you actutally compete
+data['Yes of course I compete'] = ['Did you win','Yes I won','No I did not'];
+data['No I just said I did to see the options here'] = ['dyel','.jpg'];
+
+//the options from are people 'Mirin
+data["Of course people are 'Mirin"] = ['dyel','.jpg'];
+data["Yeah not really sure what 'Mirin is"] = ['dyel','.jpg'];
+
+// the options from Can you do 3 plates for 15 reps
+data['Yes I can'] =  ['dyel','.jpg'];
+data['No that is too much for me'] =  ['dyel','.jpg'];
+
+//the options from Did you win
+data['Yes I won'] = ['Are you Arnold','Yes I am Arnold','No I am not'];
+data['No I did not'] =  ['dyel','.jpg'];
+
+//the options from are you aronold
+data['Yes I am Arnold'] = ['dyel','.jpg'];
+data['No I am not'] = ['dyel','.jpg'];
