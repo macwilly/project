@@ -77,6 +77,8 @@ function selectBuild(which){
 		//Add the selects to the page
 		$('selects').appendChild('lable');
 		$('selects').appendChild('selects');
+	}else{
+		dyelImage(temp);
 	}
 	
 }
