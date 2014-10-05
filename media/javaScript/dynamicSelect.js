@@ -21,10 +21,11 @@ function $$(name){
 *
 */
 function selectBuild(which){
+
 	var temp;
 	/* sets the */
-	if(which.value !== undefined){
-		temp=which.value;
+	if(which.value != undefined){
+		var temp=which.value;
 		var last = $('selects').lastChild;
 
 		/*This looks to see if the current selected  select menu is the last one
@@ -32,51 +33,53 @@ function selectBuild(which){
 		*/
 		while(which != last){
 			$('selects').removeChild(last);
-			last = $('selects').lastChild;
-		}else{
-			temp = which;
+			last = $('select').lastChild;
 		}
 
 	}
-
+	else{
+			temp = which;
+		}
+		
 	if(data[temp][0]!='DYEL'){
 		
-		//This will create the lable that goes above the options 
-		var lable= document.createElement('p');
+		//This will create the label that goes above the options 
+		var label= document.createElement('p');
 		var question=document.createTextNode(data[temp][0]+' ?');
-		lable.appendChild(question);
+		label.appendChild(question);
 
 		//create the new select with an id and name
-		var select=document.createElement('select');
-		select.setAttribute('id', obj[selected][0]);
-		select.setAttribute('name', 'selects');
+		var selectEle=document.createElement('select');
+		
+		selectEle.setAttribute('id', data[temp][0]);
+		selectEle.setAttribute('name', 'selects');
 		
 		//make it work in ie7 yayyyy
 		if(!ie7){
-				sel.setAttribute('onchange', 'selectBuild(this)');
+				selectEle.setAttribute('onchange', 'selectBuild(this)');
 			}else{
-				sel.setAttribute('onchange', function(){selectBuild(this);});
+				selectEle.setAttribute('onchange', function(){selectBuild(this);});
 			}
 
 		//creat and empty option for the first option in the select
 		var option=document.createElement('option');
-				var text=document.createTextNode("--Do you even lift !?--");
-				option.appendChild(text);
-				//append
-				select.appendChild(option);
+			var text=document.createTextNode("--Do you even lift !?--");
+			option.appendChild(text);
+			//append
+			selectEle.appendChild(option);
 
 		//taking the information from the data source and using it to populate the options 		
-		for(var i=1, l=obj[selected].length; i<l; i++){
+		for(var i=1, l=data[temp].length; i<l; i++){
 				var optionN=document.createElement('option');
-				optionN.setAttribute('value', obj[selected][i]);
-				var dataInfo=document.createTextNode(obj[selected][i]);
+				optionN.setAttribute('value', data[temp][i]);
+				var dataInfo=document.createTextNode(data[temp][i]);
 				optionN.appendChild(dataInfo);
-				select.appendChild(optionN);
+				selectEle.appendChild(optionN);
 		}
 
 		//Add the selects to the page
-		$('selects').appendChild('lable');
-		$('selects').appendChild('selects');
+		$('selects').appendChild(label);
+		$('selects').appendChild(selectEle);
 	}else{
 		dyelImage(temp);
 	}
@@ -100,14 +103,14 @@ function dyelImage(which){
 	}
 	
 	img = document.createElement('img');
-	img.setAttribute('src','../images/'+meme);
+	img.setAttribute('src','media/images/'+meme);
 	img.setAttribute('alt',data[which][2]);
 
 	$('dyelMemeArea').appendChild(img);
 
 }
 
-//bring up the meme
-if(data.[which][0]=='dyel'){
+/*//bring up the meme
+if(data[which][0]=='dyel'){
 	dyelImage(temp);
-}
+}*/
