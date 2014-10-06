@@ -89,7 +89,8 @@ function selectBuild(which){
 		fadeIn();
 	}else{
 		dyelImage(temp);
-		lift();
+		liftImg();
+		liftText();
 		formMake();
 	}
 	
