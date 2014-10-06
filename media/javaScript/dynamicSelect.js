@@ -23,7 +23,7 @@ function $$(name){
 function selectBuild(which){
 
 	var temp;
-	/* sets the */
+	//used to remove last child element.
 	if(which.value != undefined){
 		var temp=which.value;
 		var last = $('wrapper').lastChild;
@@ -77,11 +77,16 @@ function selectBuild(which){
 				optionN.appendChild(dataInfo);
 				selectEle.appendChild(optionN);
 		}
-		
+		var div = document.createElement('div');
 		//Add the selects to the page
-		//fadeIn($('wrapper').appendChild{(label);});
+		//fadeIn();
 		$('wrapper').appendChild(label);
 		$('wrapper').appendChild(selectEle);
+		//fadeIn();
+		/*div.appendChild(label);
+		div.appendChild(selectEle);
+		$('wrapper').appendChild(div);*/
+		fadeIn();
 	}else{
 		dyelImage(temp);
 		formMake();
