@@ -1,8 +1,18 @@
+body {
+	background-color: rgb(164,84,178);/*the gradient will not work in lower ie so this is to fail with grace*/
+    height: 800px;
+    background: -webkit-linear-gradient(rgb(164,84,178), rgb(43,41,41)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(164,84,178), rgb(43,41,41)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(164,84,178), rgb(43,41,41)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(164,84,178), rgb(43,41,41)); /* Standard syntax (must be last) */
+    /*gradent was learned from w3 schools http://www.w3schools.com/css/css3_gradients.asp */
+}
+
 img{
 	position:absolute;
-	/*top:100px;*/
 	left: 600px;
 	}
+
 p{
 	color:red;
 }
