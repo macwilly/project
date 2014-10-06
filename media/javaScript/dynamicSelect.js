@@ -26,22 +26,22 @@ function selectBuild(which){
 	/* sets the */
 	if(which.value != undefined){
 		var temp=which.value;
-		var last = $('selects').lastChild;
+		var last = $('wrapper').lastChild;
+		//var pic = $('dyelMemeArea').firstChild;
 
 		/*This looks to see if the current selected  select menu is the last one
 		* if not it will remove the other menus till it is the last
 		*/
-		while(which != last){
-			$('selects').removeChild(last);
-			last = $('select').lastChild;
-		}
+		while(which != which.parentNode.lastChild){
+			which.parentNode.removeChild(which.parentNode.lastChild);
 
-	}
-	else{
+		}
+		
+	}else{
 			temp = which;
 		}
 		
-	if(data[temp][0]!='DYEL'){
+	if(data[temp][0]!='dyel'){
 		
 		//This will create the label that goes above the options 
 		var label= document.createElement('p');
@@ -76,13 +76,16 @@ function selectBuild(which){
 				optionN.appendChild(dataInfo);
 				selectEle.appendChild(optionN);
 		}
-
+		
 		//Add the selects to the page
-		$('selects').appendChild(label);
-		$('selects').appendChild(selectEle);
+		$('wrapper').appendChild(label);
+		$('wrapper').appendChild(selectEle);
 	}else{
 		dyelImage(temp);
+		formMake();
 	}
+	
+
 	
 }
 
@@ -98,15 +101,78 @@ function dyelImage(which){
 	var dataEnd = false;
 	
 	//test to make sure that we are at the end of data set
-	if(data[which][1]=='dyel'){
+	if(data[which][0]=='dyel'){
 		dataEnd = true;
 	}
 	
-	img = document.createElement('img');
+	//this will make the image
+	var img = document.createElement('img');
 	img.setAttribute('src','media/images/'+meme);
 	img.setAttribute('alt',data[which][2]);
 
-	$('dyelMemeArea').appendChild(img);
+	//this will make the caption for the source of the image
+	var caption= document.createElement('p');
+	var imgSourceInfo=document.createTextNode(data[which][3]);
+	caption.appendChild(imgSourceInfo);
+
+
+	$('wrapper').appendChild(img);
+	$('wrapper').appendChild(caption);
+
+}
+function formMake(){
+	//making the form
+	var form = document.createElement('form');
+	var newLine1 = document.createElement('br');
+	var newLine2 = document.createElement('br');
+	var newLine3 = document.createElement('br');
+	var newLine4 = document.createElement('br');
+	var inputName = document.createElement('input');
+	var inputEmail = document.createElement('input');
+	var commentBox = document.createElement('textarea');
+	var submitButton = document.createElement('input');
+	//form
+	form.setAttribute('name','form');
+	form.setAttribute('action','#');
+	form.setAttribute('method','');
+	form.setAttribute('onsubmit','return validate()');
+	//Name input
+	inputName.setAttribute('type','text');
+	inputName.setAttribute('name','name');
+	inputName.setAttribute('id','id');
+	inputName.setAttribute('size','40');
+	inputName.setAttribute('maxlength','40');
+	inputName.setAttribute('placeholder','Your Name');
+	inputName.setAttribute('value','');
+	//email input
+	inputEmail.setAttribute('type','text');
+	inputEmail.setAttribute('size','40');
+	inputEmail.setAttribute('name','email');
+	inputEmail.setAttribute('id','email');
+	inputEmail.setAttribute('maxlength','40');
+	inputEmail.setAttribute('placeholder','example@example.com');
+	inputEmail.setAttribute('value','');
+	//comment input
+	commentBox.setAttribute('maxlength','6000');
+	commentBox.setAttribute('name','commentBox');
+	commentBox.setAttribute('id','commentBox');
+	commentBox.setAttribute('placeholder','Please enter comment max of 6000 characters.');
+	//submit button
+	submitButton.setAttribute('type','submit');
+	submitButton.setAttribute('value','submit');
+	submitButton.setAttribute('name','submit');
+	submitButton.setAttribute('id','submit');
+
+	form.appendChild(inputName);
+	form.appendChild(newLine1);
+	form.appendChild(inputEmail);
+	form.appendChild(newLine2);
+	form.appendChild(commentBox);
+	form.appendChild(newLine3);
+	form.appendChild(submitButton);
+
+	$('wrapper').appendChild(form);
+
 
 }
 
