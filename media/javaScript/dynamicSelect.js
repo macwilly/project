@@ -45,6 +45,7 @@ function selectBuild(which){
 		
 		//This will create the label that goes above the options 
 		var label= document.createElement('p');
+		label.setAttribute('id', 'label');
 		var question=document.createTextNode(data[temp][0]+' ?');
 		label.appendChild(question);
 
@@ -78,6 +79,7 @@ function selectBuild(which){
 		}
 		
 		//Add the selects to the page
+		//fadeIn($('wrapper').appendChild{(label);});
 		$('wrapper').appendChild(label);
 		$('wrapper').appendChild(selectEle);
 	}else{
@@ -131,6 +133,8 @@ function formMake(){
 	var inputEmail = document.createElement('input');
 	var commentBox = document.createElement('textarea');
 	var submitButton = document.createElement('input');
+	var header = document.createElement('h4');
+
 	//form
 	form.setAttribute('name','form');
 	form.setAttribute('action','#');
@@ -162,7 +166,11 @@ function formMake(){
 	submitButton.setAttribute('value','submit');
 	submitButton.setAttribute('name','submit');
 	submitButton.setAttribute('id','submit');
+	//header
+	var headerInfo = document.createTextNode('Send a comment to Dom to ask him how you can lift!!!');
+	header.appendChild(headerInfo);
 
+	form.appendChild(header);
 	form.appendChild(inputName);
 	form.appendChild(newLine1);
 	form.appendChild(inputEmail);
@@ -170,6 +178,7 @@ function formMake(){
 	form.appendChild(commentBox);
 	form.appendChild(newLine3);
 	form.appendChild(submitButton);
+
 
 	$('wrapper').appendChild(form);
 
