@@ -11,7 +11,7 @@ function fadeIn(){
 		hex -=5;
 		document.getElementById('label').style.color=(hex);
 		//setting the amount of time for inbetween calls
-		setTimeOut(fadeIn(),6);
+		setTimeOut(fuction(){fadeIn();},6);
 	}else hex = ffffff;
 }
 
