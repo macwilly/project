@@ -89,6 +89,7 @@ function selectBuild(which){
 		fadeIn();
 	}else{
 		dyelImage(temp);
+		lift();
 		formMake();
 	}
 	
@@ -116,11 +117,14 @@ function dyelImage(which){
 	var img = document.createElement('img');
 	img.setAttribute('src','media/images/'+meme);
 	img.setAttribute('alt',data[which][2]);
+	img.setAttribute('style','top:1200px;');
 
 	//this will make the caption for the source of the image
 	var caption= document.createElement('p');
 	var imgSourceInfo=document.createTextNode(data[which][3]);
+	caption.setAttribute('id','sourceInfo');
 	caption.appendChild(imgSourceInfo);
+	caption.setAttribute('style','top:1200px;');
 
 
 	$('wrapper').appendChild(img);
