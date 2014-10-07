@@ -132,6 +132,8 @@ function dyelImage(which){
 	$('wrapper').appendChild(caption);
 
 }
+
+// This makes the form 
 function formMake(){
 	//making the form
 	var form = document.createElement('form');
@@ -149,11 +151,11 @@ function formMake(){
 	form.setAttribute('name','form');
 	form.setAttribute('action','#');
 	form.setAttribute('method','');
-	form.setAttribute('onsubmit','return validate()');
+	form.setAttribute('onsubmit','return validation()');
 	//Name input
 	inputName.setAttribute('type','text');
 	inputName.setAttribute('name','name');
-	inputName.setAttribute('id','id');
+	inputName.setAttribute('id','name');
 	inputName.setAttribute('size','40');
 	inputName.setAttribute('maxlength','40');
 	inputName.setAttribute('placeholder','Your Name');
@@ -192,10 +194,19 @@ function formMake(){
 
 	$('wrapper').appendChild(form);
 
+	//this will se the value of name to the local storage
+	if(localStorage.getItem('name')!=null){
+		document.getElementById('name').value=localStorage.getItem('name');
+	}else{
+		document.getElementById('name').value='';
+	}
+
+	//will set the value of the email to local storage
+	if(localStorage.getItem('email')!='undefined'){
+		document.getElementById('email').value=localStorage.getItem('email');
+	}else{
+		document.getElementById('email').value='';
+	}
+
 
 }
-
-/*//bring up the meme
-if(data[which][0]=='dyel'){
-	dyelImage(temp);
-}*/

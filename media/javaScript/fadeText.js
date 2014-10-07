@@ -13,7 +13,7 @@ function fadeIn(){
 		//will get the second to last child of the wrapper
 		var chil=document.getElementById('wrapper').childNodes.length;
 		document.getElementById('wrapper').childNodes[chil-2].style.opacity=(opacity);
-		console.log(document.getElementById('wrapper').childNodes.length);
+		//console.log(document.getElementById('wrapper').childNodes.length);
 		setTimeout(function(){fadeIn();},500);
 	}else opacity = 0;
 }
