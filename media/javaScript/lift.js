@@ -7,7 +7,7 @@ function liftImg(){
 	var $ = document.getElementById('sourceInfo');
 	console.log($$.style.top);
 	
-	if(parseInt($$.style.top)>50){
+	if(parseInt($$.style.top)>90){
 		$$.style.top=parseInt($$.style.top)-25+'px';
 		setTimeout( function(){liftImg();},10);
 	}
@@ -16,7 +16,7 @@ function liftImg(){
 
 function liftText(){
 	var $ = document.getElementById('sourceInfo');
-		if(parseInt($.style.top)>560){
+		if(parseInt($.style.top)>570){
 			$.style.top=parseInt($.style.top)-24+'px';
 			setTimeout( function(){liftText();},6);
 		}

@@ -54,7 +54,7 @@ function selectBuild(which){
 		
 		selectEle.setAttribute('id', data[temp][0]);
 		selectEle.setAttribute('name', 'selects');
-		
+		selectEle.style.border='solid #ffffff';
 		//make it work in ie7 yayyyy
 		if(!ie7){
 				selectEle.setAttribute('onchange', 'selectBuild(this)');
@@ -79,13 +79,8 @@ function selectBuild(which){
 		}
 		var div = document.createElement('div');
 		//Add the selects to the page
-		//fadeIn();
 		$('wrapper').appendChild(label);
 		$('wrapper').appendChild(selectEle);
-		//fadeIn();
-		/*div.appendChild(label);
-		div.appendChild(selectEle);
-		$('wrapper').appendChild(div);*/
 		fadeIn();
 	}else{
 		dyelImage(temp);

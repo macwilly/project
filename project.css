@@ -6,6 +6,8 @@ body {
     background: -moz-linear-gradient(rgb(164,84,178), rgb(43,41,41)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(rgb(164,84,178), rgb(43,41,41)); /* Standard syntax (must be last) */
     /*gradent was learned from w3 schools http://www.w3schools.com/css/css3_gradients.asp */
+
+    font-family: 'Gloria Hallelujah', cursive, serif ;
 }
 
 img{
@@ -14,7 +16,7 @@ img{
 	}
 
 p{
-	color:red;
+	color:#ffde31;
 }
 
 #sourceInfo{
@@ -23,5 +25,15 @@ p{
 }
 
 h1{
+	text-align: center;
+}
 
+a{
+	color:#d08002;
+}
+a:visited{
+	color: #bebbb7;
+}
+select{
+	font-family: 'Rock Salt', cursive; 
 }
