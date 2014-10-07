@@ -21,3 +21,5 @@ function liftText(){
 			setTimeout( function(){liftText();},6);
 		}
 	}
+
+	
