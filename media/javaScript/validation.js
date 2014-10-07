@@ -1,3 +1,8 @@
+/*Mackenzie Willard
+* This will make sure that the input on the forms input boxes has infomation
+* also if it is an email it will make sure that it has a @ and a .
+*/
+
 function validation(){
 	//start with form passing so that it does not start red
 	var nameOk = true;

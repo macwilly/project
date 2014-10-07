@@ -1,7 +1,10 @@
 /* Mackenzie Willard
 * this is the script that is used to make the 
 * dynamic select menue for the first project in
-* client side programming*/
+* client side programming
+* also creates the form that goes on the page 
+* creates the image that goes on the page
+*/
 
 /*This will get the element of a certian id as well as return it 
 *       document.getElementByI('select').action();

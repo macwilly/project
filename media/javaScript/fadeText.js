@@ -1,5 +1,6 @@
 /*Mackenzie Willard
 * this fuction will make the text fade in 
+* that is on the selects
 */
 
 //this is the starting hex color

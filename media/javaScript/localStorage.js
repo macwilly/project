@@ -1,5 +1,5 @@
 /*Mackenzie Willard
-*
+* this makes that local storage for the page
 */
 
 function setStorage(){

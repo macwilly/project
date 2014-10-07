@@ -1,3 +1,7 @@
+/*Mackenzie Willard
+*	This code looks to see if the user is in a browser that will not support the functionality 
+*/
+
 // what does the browser understand?
 	if(document.getElementById && document.all){
 		//I know I'm in modern IE
